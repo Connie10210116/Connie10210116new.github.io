@@ -1,0 +1,136 @@
+.carousel-caption h5,
+.carousel-caption p {
+    color: #fff; /* 文字顏色 */
+}
+
+
+.btn-menu {
+    position: fixed;
+    right: 20px; /* 按钮移动到页面右侧 */
+    top: 20px; /* 按钮在页面顶部 */
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 2000; 
+}
+
+.btn-menu div {
+    width: 100%;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 12px;
+}
+
+.btn-menu.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.btn-menu.active div:first-child {
+    transform: translateY(14px) rotate(45deg);
+}
+
+.btn-menu.active div:last-child {
+    transform: translateY(-14px) rotate(-45deg);
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* 菜單覆蓋頁面 */
+    height: 100vh; /* 菜單覆蓋頁面高度 */
+    background-color: rgba(0, 0, 0, 0.5); /* 透明背景色 */
+    z-index: 1000; 
+    display: none; /* 默认隐藏菜单 */
+}
+
+.menu.active {
+    display: block; /* 菜單被激活時顯示 */
+}
+
+
+.menu a {
+    font-family: Optima, sans-serif; 
+    display: block;
+    text-decoration: none; /* 去除底線 */
+    color: #ffffff; /* 文字顏色 */
+    padding-top: 50px; /* 在頂部添加空隙 */
+    padding-left: 50px; /* 在左側添加空隙 */
+    letter-spacing: 3px;
+    font-size: 15px; /* 字體大小 */
+    line-height: 30px; /* 行距 */
+    transition: color 0.3s; /* 添加颜色变化的过渡效果 */
+
+}
+.menu a:hover {
+    color: #e887c9; /* 滑鼠移去的文字颜色 */
+}
+
+.new-section {
+    padding: 50px;
+}
+
+.new-section p {
+    font-size: 14px;
+    font-family: "PMingLiU", "新細明體", serif;
+    line-height: 4; /* 行距 */
+    writing-mode: vertical-rl; /* 文字垂直顯示 */
+    text-orientation: upright; /* 文字保持直立 */
+    letter-spacing: 4px; /* 字距 */
+}
+#music-control {
+    position: fixed;
+    color: #ffffff; /* 文字顏色 */
+    font-family: Optima, sans-serif;
+    top: 20px;
+    right: 60px;
+    z-index: 9999;
+    border: none;
+    background-color: transparent; /* 背景透明 */
+    cursor: pointer;
+    letter-spacing: 4px;
+    transition: color 0.3s; /* 添加颜色变化的过渡效果 */
+}
+#music-control:hover{
+    color: #e37eab; /* 滑鼠移去的文字颜色 */
+
+}
+.container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.box {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    height: 60px;
+    animation: move 20s infinite linear;
+}
+
+.box.active {
+    animation-play-state: paused;
+}
+
+/* .box:hover {
+    animation-play-state: paused;
+} */
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+.img {
+    flex-shrink: 0;
+    width: 20%;
+    height: 100%;
+    background-color: transparent; /* 背景透明 */
+    color: #f7a4d7; /* 文字顏色 */
+    font-size: 12px; /* 字體大小 */
+    font-family: Optima, sans-serif;
+    letter-spacing: 4px; /* 字距 */
+}

@@ -1,0 +1,52 @@
+.new-section {
+    padding: 70px;
+}
+
+.new-section p {
+    font-size: 15px;
+    font-family: "PMingLiU", "新細明體", serif;
+    line-height: 4; /* 行距 */
+    writing-mode: vertical-rl; /* 文字垂直顯示 */
+    text-orientation: upright; /* 文字保持直立 */
+    letter-spacing: 4px; /* 字距 */
+}
+
+.container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.box {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    height: 60px;
+    animation: move 20s infinite linear;
+}
+
+.box.active {
+    animation-play-state: paused;
+}
+
+/* .box:hover {
+    animation-play-state: paused;
+} */
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+.img {
+    flex-shrink: 0;
+    width: 20%;
+    height: 100%;
+    background-color: transparent; /* 背景透明 */
+    color: #78bfeb; /* 文字顏色 */
+    font-size: 14px; /* 字體大小 */
+    font-family: Optima, sans-serif;
+    letter-spacing: 4px; /* 字距 */
+}
